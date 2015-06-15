@@ -1,0 +1,14 @@
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\bin\Debug\RecorderFileFolderDialog.exe
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\bin\Debug\RecorderFileFolderDialog.pdb
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog.csprojResolveAssemblyReference.cache
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\Dialog.baml
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\MainWindow.baml
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\Dialog.g.cs
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\MainWindow.g.cs
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\App.g.cs
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog_MarkupCompile.cache
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog.g.resources
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog.Properties.Resources.resources
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog.csproj.GenerateResource.Cache
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog.exe
+C:\Users\karae\Documents\Visual Studio 2012\Projects\RecorderFileFolderDialog\RecorderFileFolderDialog\obj\Debug\RecorderFileFolderDialog.pdb
