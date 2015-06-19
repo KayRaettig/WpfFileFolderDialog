@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +26,7 @@ namespace RecorderFileFolderDialog
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Dialog dlg = new Dialog();
+            SystemMenuManager.DisableSystemButtons(dlg, SystemMenuManager.SystemButton.Maximize);
             dlg.ShowDialog();
         }
     }

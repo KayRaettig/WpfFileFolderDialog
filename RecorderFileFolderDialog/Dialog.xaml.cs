@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -22,14 +21,17 @@ namespace RecorderFileFolderDialog
     {
         public Dialog()
         {
-            this.SourceInitialized += Dialog_SourceInitialized;
-            InitializeComponent();
+            InitializeComponent();   
         }
 
-
-        private void Dialog_SourceInitialized(object sender, EventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NativeMethodsWrapper.DisableSystemButtons(this, NativeMethodsWrapper.SystemButton.Maximize | NativeMethodsWrapper.SystemButton.Minimize);
+            SystemMenuManager.DisableSystemMenu(this);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SystemMenuManager.EnableSystemMenu(this);
         }
     }
 }

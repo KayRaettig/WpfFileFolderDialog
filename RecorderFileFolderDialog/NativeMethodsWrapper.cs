@@ -1,64 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Drawing;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace RecorderFileFolderDialog
 {
     public class NativeMethodsWrapper
     {
-        [Flags]
-        public enum SystemButton
-        {
-            Minimize = 1,
-            Maximize = 2
-        }
+
 
         private NativeMethodsWrapper(){}
 
-        [DllImport("user32.dll")]
-        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-        [DllImport("user32.dll")]
-        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
-        private const int GWL_STYLE = -16;
-        private const int WS_MAXIMIZEBOX = 0x10000;
-        private const int WS_MINIMIZEBOX = 0x20000;
+   
 
-
-
-
-        public static void DisableSystemButtons(Window window, SystemButton buttons)
+        public static void GetIcon(System.Windows.Controls.Image img)
         {
-            var hwnd = new WindowInteropHelper(window).Handle;
-            var value = GetWindowLong(hwnd, GWL_STYLE);
+            var error = System.Drawing.SystemIcons.Application;
+            ImageSource image = System.Windows.Interop.Imaging.CreateBitmapSourceFromHIcon(error.Handle, Int32Rect.Empty,
+                BitmapSizeOptions.FromEmptyOptions());
 
-            var btns = (int)buttons;
-
-
-            if (btns == 2)
-            {
-                value = value & ~WS_MAXIMIZEBOX;
-            }
-
-
-            if (btns == 1)
-            {
-                value = value & ~WS_MINIMIZEBOX;
-            }
-
-            if (btns == 3)
-            {
-                value = value & ~WS_MAXIMIZEBOX & ~ WS_MINIMIZEBOX;
-            }
-
-
-            SetWindowLong(hwnd, GWL_STYLE, (value));
+            img.Source = image;
+            
         }
-
 
     }
 }
