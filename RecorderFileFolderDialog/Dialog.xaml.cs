@@ -11,6 +11,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WindowCustomization;
 
 namespace RecorderFileFolderDialog
 {
@@ -19,19 +20,34 @@ namespace RecorderFileFolderDialog
     /// </summary>
     public partial class Dialog : Window
     {
+        private HelpButtonClicked callback;
         public Dialog()
         {
-            InitializeComponent();   
+            SourceInitialized += Dialog_SourceInitialized;
+            InitializeComponent();
+            callback = new HelpButtonClicked(Help_Clicked);
+        }
+
+        void Dialog_SourceInitialized(object sender, EventArgs e)
+        {
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SystemMenuManager.DisableSystemMenu(this);
+            //this.ShowHelpButton(new HelpButtonClicked(Help_Clicked));
+            
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            SystemMenuManager.EnableSystemMenu(this);
+            this.HideHelpButton(true, true);
+        }
+
+        private void Help_Clicked(object sender, object context)
+        {
+            MessageBox.Show((sender as Window).Title + " asked for help.");
         }
     }
 }

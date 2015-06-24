@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WindowCustomization;
 
 namespace RecorderFileFolderDialog
 {
@@ -20,13 +21,20 @@ namespace RecorderFileFolderDialog
     {
         public MainWindow()
         {
+            SourceInitialized += MainWindow_SourceInitialized;
             InitializeComponent();
+        }
+
+        void MainWindow_SourceInitialized(object sender, EventArgs e)
+        {
+            this.HideWindowIcon();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             Dialog dlg = new Dialog();
-            SystemMenuManager.DisableSystemButtons(dlg, SystemMenuManager.SystemButton.Maximize);
+            
             dlg.ShowDialog();
         }
     }
